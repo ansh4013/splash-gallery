@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery - Showcase Your Creativity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 ArtGallery</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="admin/admin.html" class="admin-link">Admin Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Art Gallery</h1>
+      <p>Discover and celebrate exceptional artwork from talented artists</p>
+      <a href="gallery.html" class="btn btn-primary">View Gallery</a>
+      <a href="admin/admin.html" class="btn btn-secondary">Admin Access</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Art Gallery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
