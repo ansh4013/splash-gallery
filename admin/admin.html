@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal - Art Gallery Management</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+      <div class="login-box">
+        <h1>🎨 Admin Portal</h1>
+        <form id="loginForm">
+          <input type="password" id="password" placeholder="Enter admin password" required>
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+        <p class="hint">Demo password: <code>admin123</code></p>
+      </div>
+    </div>
+
+    <!-- Dashboard Screen -->
+    <div id="dashboardScreen" class="screen">
+      <nav class="admin-nav">
+        <h2>Admin Dashboard</h2>
+        <button id="logoutBtn" class="btn-logout">Logout</button>
+      </nav>
+
+      <div class="admin-content">
+        <!-- Add New Artwork Section -->
+        <section class="section">
+          <h3>📝 Add New Artwork</h3>
+          <form id="artForm" class="art-form">
+            <div class="form-group">
+              <label>Title:</label>
+              <input type="text" id="artTitle" placeholder="Artwork title" required>
+            </div>
+
+            <div class="form-group">
+              <label>Artist Name:</label>
+              <input type="text" id="artArtist" placeholder="Artist name" required>
+            </div>
+
+            <div class="form-group">
+              <label>Category:</label>
+              <select id="artCategory" required>
+                <option value="">Select category</option>
+                <option value="painting">Painting</option>
+                <option value="photography">Photography</option>
+                <option value="sculpture">Sculpture</option>
+                <option value="digital">Digital Art</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Description:</label>
+              <textarea id="artDescription" placeholder="Artwork description" rows="4"></textarea>
+            </div>
+
+            <!-- IMAGE UPLOAD INPUT -->
+            <div class="form-group">
+              <label>Upload Image:</label>
+              <div class="file-input-wrapper">
+                <input type="file" id="artImage" accept="image/*" required>
+                <label for="artImage" class="file-label">
+                  <span class="upload-icon">📸</span>
+                  <span class="upload-text">Click to upload or drag and drop</span>
+                </label>
+              </div>
+              <!-- Image Preview -->
+              <div id="imagePreview" class="image-preview-container" style="display: none;">
+                <img id="previewImg" src="" alt="Preview">
+                <button type="button" class="btn-remove-image" onclick="removeImage()">Remove</button>
+              </div>
+              <small id="fileInfo"></small>
+            </div>
+
+            <button type="submit" class="btn-submit">Add Artwork</button>
+          </form>
+        </section>
+
+        <!-- Gallery Management Section -->
+        <section class="section">
+          <h3>🖼️ Manage Artworks</h3>
+          <div class="management-stats">
+            <p>Total artworks: <strong id="artworkCount">0</strong></p>
+          </div>
+          <div id="artworksList" class="artworks-list">
+            <!-- Artworks displayed here -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
