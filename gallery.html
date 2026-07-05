@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - Browse Artworks</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">🎨 ArtGallery</a>
@@ -15,9 +17,11 @@
         <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="admin/admin.html" class="admin-link">Admin Portal</a></li>
       </ul>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
   </nav>
 
+  <!-- Gallery Section -->
   <section class="gallery-section">
     <div class="container">
       <h2>Our Artworks</h2>
@@ -28,11 +32,12 @@
         <button class="filter-btn" data-filter="painting">Painting</button>
         <button class="filter-btn" data-filter="photography">Photography</button>
         <button class="filter-btn" data-filter="sculpture">Sculpture</button>
+        <button class="filter-btn" data-filter="digital">Digital Art</button>
       </div>
 
       <!-- Gallery Grid -->
       <div class="gallery-grid" id="galleryGrid">
-        <!-- Art pieces loaded here via JS -->
+        <!-- Artworks loaded here via JS -->
       </div>
     </div>
   </section>
@@ -45,15 +50,22 @@
       <div class="modal-info">
         <h3 id="modalTitle"></h3>
         <p id="modalArtist"></p>
+        <p id="modalCategory"></p>
         <p id="modalDescription"></p>
+        <p id="modalDate"></p>
       </div>
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2026 Art Gallery. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Art Gallery. All rights reserved.</p>
+      <p>Made with 💜 by Art Enthusiasts</p>
+    </div>
   </footer>
 
+  <script src="js/storage.js"></script>
   <script src="js/gallery.js"></script>
 </body>
 </html>
