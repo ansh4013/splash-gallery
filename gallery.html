@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Browse Artworks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">🎨 ArtGallery</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="admin/admin.html" class="admin-link">Admin Portal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Our Artworks</h2>
+      
+      <!-- Filter Options -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="painting">Painting</button>
+        <button class="filter-btn" data-filter="photography">Photography</button>
+        <button class="filter-btn" data-filter="sculpture">Sculpture</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Art pieces loaded here via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for viewing full artwork -->
+  <div class="modal" id="artModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalArtist"></p>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Art Gallery. All rights reserved.</p>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
